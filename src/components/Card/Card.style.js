@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledCardWrapper = styled.div`
-    width: 9.375rem;
-    height: 12.5rem;
+    width: 11rem;
+    height: 15rem;
     border: 0.0625rem solid rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0.1875rem 0.125rem 0.625rem rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
@@ -18,12 +18,18 @@ export const StyledCardWrapper = styled.div`
 `;
 
 export const StyledText = styled.p`
-    color: red;
-    font-size: 0.5rem;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
     margin: 0;
+    /* border-radius: 5px; */
+    height: 100%;
+    width: 100%;
 `;
 
 export const StyledMovieImage = styled.img`
-    width: auto;
+    width: 100%;
     height: 85%;
+    margin-bottom: 1px solid gray ;
+    /* border-radius: 20px; */
 `

@@ -3,11 +3,16 @@ import {StyledSearchBox, StyledSearchInput, StyledSearchButton} from "./SearchBo
 
 export const SearchBox = ({setSearchKeyword}) => {
     const [inputValue, setInputValue] = useState("");
-    
+
+    const enterButton = (e) => {
+        if(e.keyCode === 13){
+            setSearchKeyword(inputValue)
+        }
+    }
     return (
         <StyledSearchBox>
-           <StyledSearchInput isColored={false} onChange={(e)=>setInputValue(e.target.value)}/>
-           <StyledSearchButton onClick={()=>setSearchKeyword(inputValue)}>Search</StyledSearchButton> 
+           <StyledSearchInput isColored={false} onChange={(e)=>setInputValue(e.target.value)} onKeyDown={enterButton}/>
+           <StyledSearchButton onClick={()=>setSearchKeyword(inputValue)} >Search</StyledSearchButton> 
         </StyledSearchBox>
     )
 }
